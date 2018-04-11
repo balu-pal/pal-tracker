@@ -82,7 +82,7 @@ jobs:
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Hello from the review environment"
-        SPRING_DATASOURCE_URL: jdbc:mysql://{{mysql-ip}}:3306/{{review-database-name}}?user={{review-database-username}}&password={{review-database-password}}&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false
+
 
 - name: deploy-production
   plan:
@@ -108,4 +108,3 @@ jobs:
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Hello from the production environment"
-        SPRING_DATASOURCE_URL: jdbc:mysql://{{mysql-ip}}:3306/{{review-database-name}}?user={{review-database-username}}&password={{review-database-password}}&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false
